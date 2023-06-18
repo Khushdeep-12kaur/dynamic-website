@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Employees</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Navigation links here -->
+    </nav>
+    <div class="logo">
+      <!-- Logo image or text here -->
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>Employee List</h1>
+    <?php
+      // PHP code to fetch and display employee data from the database
+      // Assuming you have established a database connection and stored the results in $employees variable
+      foreach ($employees as $employee) {
+        echo "<p>Name: " . $employee['name'] . "</p>";
+        echo "<p>Hours Worked: " . $employee['hours_worked'] . "</p>";
+        // Display other employee information fields here
+        echo "<hr>";
+      }
+    ?>
+  </div>
+
+  <footer>
+    <!-- Footer content here -->
+  </footer>
+</body>
+</html>
